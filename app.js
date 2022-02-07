@@ -12,8 +12,6 @@ const computerPlay = () => {
 	return randomArr[Math.floor(Math.random() * randomArr.length)];
 };
 
-const computerSelection = computerPlay();
-
 const playRound = (playerSelection, computerSelection) => {
 	userChoice = playerSelection();
 	if (userChoice === computerSelection) {
@@ -40,13 +38,11 @@ const playRound = (playerSelection, computerSelection) => {
 };
 
 const game = () => {
-	console.log(playRound(playerSelection, computerSelection));
-	console.log(playRound(playerSelection, computerSelection));
-	console.log(playRound(playerSelection, computerSelection));
-	console.log(playRound(playerSelection, computerSelection));
-	console.log(playRound(playerSelection, computerSelection));
+	for (let i = 0; i < 5; i++) {
+		let computerSelection = computerPlay();
+
+		console.log(playRound(playerSelection, computerSelection));
+	}
 };
 
 game();
-
-//Testestest
