@@ -2,7 +2,7 @@ const playerSelection = () => {
 	let user = prompt('Select: rock, paper, or scissors');
 	user = user.toLowerCase();
 
-	if (user === 'rock' || user === 'paper' || user === 'scissors') {
+	if (user == 'rock' || user == 'paper' || user == 'scissors') {
 		return user;
 	}
 };
